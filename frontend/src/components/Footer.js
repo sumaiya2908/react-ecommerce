@@ -40,7 +40,7 @@ const Footer = () => {
       </Container>
       <footer>
         <div className='footer__copyright'>
-          &copy; 2020 <strong>Rn Store</strong>. All rights reserved.
+          &copy; 2021 <strong>KamDaam</strong>. All rights reserved.
         </div>
         <div className='footer__links'>
           <ul>

@@ -139,7 +139,7 @@ const Header = ({ history }) => {
                 </Dropdown.Menu>
               ) : (
                 <Dropdown.Menu>
-                  <Dropdown.Header>Welcome to Rn Store</Dropdown.Header>
+                  <Dropdown.Header>Welcome to KamDaam</Dropdown.Header>
                   <Dropdown.Item as={Link} to='/login'>
                     Sign In
                   </Dropdown.Item>
