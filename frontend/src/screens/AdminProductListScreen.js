@@ -69,6 +69,7 @@ const AdminProductListScreen = ({ history, match }) => {
             <Table.Body>
               {products &&
                 products.map((product) => (
+                  
                   <Table.Row key={product._id}>
                     <Table.Cell>{product.name}</Table.Cell>
                     <Table.Cell>{product.price}</Table.Cell>

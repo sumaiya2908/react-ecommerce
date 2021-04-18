@@ -26,7 +26,7 @@ const CartItems = ({ items }) => {
         <div className='cart-items'>
           <div className='cart-items__name'>{items.name}</div>
           <div className='cart-items__price'>
-            {items.qty} x ${items.price}
+            {items.qty} x ₹{items.price}
           </div>
 
           <Form className='cart-items__form'>

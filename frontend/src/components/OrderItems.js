@@ -14,7 +14,7 @@ const OrderItems = ({ items }) => {
         <div className='order-item__info'>
           <div>{items.name}</div>
           <div>
-            {items.qty} x ${items.price}
+            {items.qty} x ₹{items.price}
           </div>
         </div>
       </div>

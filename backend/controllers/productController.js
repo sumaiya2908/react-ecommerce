@@ -48,6 +48,7 @@ const updateProductById = asyncHandler(async (req, res) => {
   if (product) {
     product.name = req.body.name || product.name;
     product.image = req.body.image || product.image;
+    product.category = req.body.category || product.category;
     product.price = req.body.price || product.price;
     product.numInStock = req.body.numInStock || product.numInStock;
     product.detail = req.body.detail || product.detail;
@@ -57,6 +58,7 @@ const updateProductById = asyncHandler(async (req, res) => {
       _id: updatedProduct._id,
       name: updatedProduct.name,
       image: updatedProduct.image,
+      category: updatedProduct.category,
       price: updatedProduct.price,
       numInStock: updatedProduct.numInStock,
       detail: updatedProduct.detail,
@@ -89,10 +91,10 @@ const deleteProductById = asyncHandler(async (req, res) => {
 const createProduct = asyncHandler(async (req, res) => {
   const product = new Product({
     user: req.user._id,
-    name: 'Sample name',
+    name: ' ',
     image: '/Images/Sample.png',
-    detail: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ducimus quisquam unde nam eos ut dolorem animi accusamus sed consequatur.',
-    price: 0,
+    category: ' ',
+    detail: ' ',
     numInStock: 0,
     rating: 0,
     numReview: 0,

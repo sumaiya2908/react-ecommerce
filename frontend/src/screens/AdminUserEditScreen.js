@@ -55,7 +55,7 @@ const AdminUserEditScreen = ({ match, history }) => {
       ) : (
         <FormContainer>
           <h1>Edit your account details</h1>
-          <Form onSubmit={(e) => submitHandler(e)} loading={loading}>
+          <Form encType="multipart/form-data" onSubmit={(e) => submitHandler(e)} loading={loading}>
             <Form.Input size='large' icon='user' iconPosition='left' label='Name' placeholder='Name' onChange={(e) => setName(e.target.value)} value={name} />
             <Form.Input size='large' icon='at' iconPosition='left' label='Email Address' type='email' placeholder='Email Address' onChange={(e) => setEmail(e.target.value)} value={email} />
             <Form.Field>

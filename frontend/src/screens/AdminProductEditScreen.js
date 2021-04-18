@@ -18,6 +18,7 @@ const AdminProductEditScreen = ({ match, history }) => {
   const [detail, setDetail] = useState('');
   const [image, setImage] = useState('');
   const [price, setPrice] = useState('');
+  const [category,setCategory] = useState('');
   const [numInStock, setNumInStock] = useState('');
 
   const userDetails = useSelector((state) => state.userDetails);
@@ -41,6 +42,7 @@ const AdminProductEditScreen = ({ match, history }) => {
         setDetail(product.detail);
         setPrice(product.price);
         setNumInStock(product.numInStock);
+        setCategory(product.category);
         setImage(product.image);
       }
     }
@@ -81,7 +83,7 @@ const AdminProductEditScreen = ({ match, history }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(adminProductUpdate({ _id: productId, name, price, numInStock, image, detail }));
+    dispatch(adminProductUpdate({ _id: productId, name, price, category, numInStock, image, detail }));
   };
 
   return (
@@ -94,12 +96,13 @@ const AdminProductEditScreen = ({ match, history }) => {
         <Message variant='danger'>{error}</Message>
       ) : (
         <FormContainer>
-          <h1>Edit your account details</h1>
+          <h1>Edit your Product Details</h1>
           <Form onSubmit={(e) => submitHandler(e)} loading={loadingProduct}>
             <Form.Input size='large' icon='shopping basket' iconPosition='left' label='Name' placeholder='Name' onChange={(e) => setName(e.target.value)} value={name} />
             <Form.TextArea size='large' label='Datail' placeholder='Detail' onChange={(e) => setDetail(e.target.value)} value={detail} style={{ height: '150px' }} />
 
-            <Form.Input size='large' icon='dollar sign' iconPosition='left' label='Price' type='text' placeholder='Price' onChange={(e) => setPrice(e.target.value)} value={price} />
+            <Form.Input size='large' icon='rupee sign' iconPosition='left' label='Price' type='text' placeholder='Price' onChange={(e) => setPrice(e.target.value)} value={price} />
+            <Form.Input size='large' icon='hashtag' iconPosition='left' label='Category' type='text' placeholder='Category' onChange={(e) => setCategory(e.target.value)} value={category} />
             <Form.Input size='large' icon='hashtag' iconPosition='left' label='NumInStock' type='text' placeholder='NumInStock' onChange={(e) => setNumInStock(e.target.value)} value={numInStock} />
 
             <Form.Input size='large' icon='image outline' iconPosition='left' label='Image' type='text' value={image} />

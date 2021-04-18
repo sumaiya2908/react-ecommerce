@@ -143,33 +143,25 @@ const OrderScreen = ({ match, history }) => {
             <Table.Body>
               <Table.Row>
                 <Table.Cell>Items:</Table.Cell>
-                <Table.Cell textAlign='right'>${order.itemsPrice}</Table.Cell>
+                <Table.Cell textAlign='right'>₹{order.itemsPrice}</Table.Cell>
               </Table.Row>
               <Table.Row>
                 <Table.Cell>Shipping & handling:</Table.Cell>
-                <Table.Cell textAlign='right'> ${order.shippingCost}</Table.Cell>
+                <Table.Cell textAlign='right'> ₹{order.shippingCost}</Table.Cell>
               </Table.Row>
               <Table.Row>
                 <Table.Cell>Tax:</Table.Cell>
-                <Table.Cell textAlign='right'> ${order.taxPrice}</Table.Cell>
+                <Table.Cell textAlign='right'> ₹{order.taxPrice}</Table.Cell>
               </Table.Row>
               <Table.Row>
                 <Table.Cell>Total:</Table.Cell>
-                <Table.Cell textAlign='right'>${order.orderTotal}</Table.Cell>
+                <Table.Cell textAlign='right'>₹{order.orderTotal}</Table.Cell>
               </Table.Row>
             </Table.Body>
           </Table>
         </div>
         {!order.isPaid && (
           <div>
-            <Message style={{ background: 'none' }}>
-              <p>
-                User Email: <input style={inputStyle} defaultValue='john@m.com' />
-              </p>
-              <p>
-                Password: <input style={inputStyle} defaultValue='12345678' />
-              </p>
-            </Message>
             {payLoading && <InlineLoader active inline='centered' />}
             {!sdkLoaded ? <InlineLoader active inline='centered' /> : <PayPalButton amount={order.orderTotal} onSuccess={successPaymentHandler} />}
           </div>

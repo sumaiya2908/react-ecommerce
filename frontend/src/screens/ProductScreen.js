@@ -72,7 +72,7 @@ const ProductScreen = ({ match, history }) => {
                 <Ratings rating={product.rating} />
               </div>
               <h1 className='product__name'>{product.name}</h1>
-              <div className='product__price'>${product.price}</div>
+              <div className='product__price'>₹{product.price}</div>
               <div className='product__detail'>
                 <p>{product.detail}</p>
                 <div>{product.numInStock > 0 ? <span style={{ color: 'green' }}>In Stock.</span> : <span style={{ color: '#f68872' }}>Out Of Stock.</span>}</div>

@@ -62,7 +62,7 @@ const AdminOrderListScreen = ({ history }) => {
                       <Table.Row key={order._id} warning={order.isDelivered && order.isPaid ? false : true} positive={order.isDelivered && order.isPaid ? true : false}>
                         <Table.Cell>{order._id}</Table.Cell>
                         <Table.Cell>{order.createdAt.split('T')[0]}</Table.Cell>
-                        <Table.Cell>${order.orderTotal}</Table.Cell>
+                        <Table.Cell>₹{order.orderTotal}</Table.Cell>
                         <Table.Cell>{order.isPaid ? 'Yes' : 'No'}</Table.Cell>
                         <Table.Cell>{order.isDelivered ? 'Yes' : 'No'}</Table.Cell>
                         <Table.Cell>

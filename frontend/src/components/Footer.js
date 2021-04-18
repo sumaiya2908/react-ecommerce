@@ -42,12 +42,12 @@ const Footer = () => {
         <div className='footer__copyright'>
           &copy; 2021 <strong>KamDaam</strong>. All rights reserved.
         </div>
-        <div className='footer__links'>
+        {/* <div className='footer__links'>
           <ul>
             <li>Privacy Policy</li>
             <li>Terms of Use</li>
           </ul>
-        </div>
+        </div> */}
       </footer>
     </>
   );
