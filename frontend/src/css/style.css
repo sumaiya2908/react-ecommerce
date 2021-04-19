@@ -85,7 +85,7 @@ button,
   align-items: center;
   gap: 10px;
   width: 160px;
-  margin: 0.8rem 0.8rem  0.4rem 0 !important;
+  margin: 0.8rem 0.8rem 0.4rem 0 !important;
   color: rgba(92, 92, 92, 0.87) !important;
   font-size: 14px !important;
   text-transform: none !important;
@@ -115,6 +115,21 @@ button,
 }
 .Toastify__toast {
   border-radius: 0px !important;
+}
+.whatsapp {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .whatsapp {
+    display: block;
+    padding-bottom: 10px;
+  }
+  .whatsappBtn {
+    letter-spacing: 0.5px;
+  }
+  .whatsappBtn Icon {
+    margin-left: 1rem;
+  }
 }
 .nav-header {
   display: flex;

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Button, Dropdown, Form, Input, Label, Menu } from "semantic-ui-react";
 import { Link, withRouter } from "react-router-dom";
 import { logout } from "../actions/userActions";
+import Whatsapp from "./Whatsapp";
 
 const Header = ({ history }) => {
   const [keyword, setKeyword] = useState("");
@@ -121,7 +122,7 @@ const Header = ({ history }) => {
             onLabelClick={(e) => setKeyword(e.target.value)}
           />
         </div>
-
+        
         <div className="nav__cart">
           <Menu compact>
             <Menu.Item>
@@ -223,6 +224,10 @@ const Header = ({ history }) => {
             </Dropdown>
           </Menu>
         </div>
+        <div>
+        <Whatsapp/>
+        </div>
+        
       </div>
     </div>
   );
