@@ -7,7 +7,6 @@ import Whatsapp from "./Whatsapp";
 
 const Header = ({ history }) => {
   const [keyword, setKeyword] = useState("");
-  const [category, setCategory] = useState("");
 
   const { cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -49,7 +48,6 @@ const Header = ({ history }) => {
     if (e.target.classList.contains("nav__search")) {
       e.target[0].value = "";
     }
-    console.log(keyword);
     if (keyword.trim()) {
       history.push(`/search/${keyword}`);
     } else {
@@ -57,15 +55,24 @@ const Header = ({ history }) => {
     }
     setKeyword("");
   };
+  const categorySelect = (e,d) => {
+    let category = d.value;
+    if (category.trim()) {
+      history.push(`/searchCategory/${category}`);
+    } else {
+      history.push("/");
+    }
+    
+  }
   const categoryOptions = [
-    { key: "ep", value: "ep", text: "Earphones" },
-    { key: "hp", value: "hp", text: "Headphones" },
-    { key: "mp", value: "mp", text: "Mobile Spare Part" },
-    { key: "bt", value: "bt", text: "Battery" },
-    { key: "ch", value: "ch", text: "Charger" },
-    { key: "mc", value: "mc", text: "Memory Card" },
-    { key: "pd", value: "pd", text: "Pendrive" },
-    { key: "cm", value: "cm", text: "Combo" },
+    { key: "ep", value: "earphone", text: "Earphones" },
+    { key: "hp", value: "headphone", text: "Headphones" },
+    { key: "mp", value: "mobile spare part", text: "Mobile Spare Part" },
+    { key: "bt", value: "battery", text: "Battery" },
+    { key: "ch", value: "charger", text: "Charger" },
+    { key: "mc", value: "memory card", text: "Memory Card" },
+    { key: "pd", value: "pendrive", text: "Pendrive" },
+    { key: "cm", value: "combo", text: "Combo" },
   ];
 
   return (
@@ -119,7 +126,7 @@ const Header = ({ history }) => {
             search
             selection
             options={categoryOptions}
-            onLabelClick={(e) => setKeyword(e.target.value)}
+            onChange={categorySelect}
           />
         </div>
         

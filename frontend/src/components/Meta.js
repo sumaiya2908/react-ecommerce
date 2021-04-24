@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 const Meta = ({ title = '' }) => {
   return (
     <Helmet>
-      <title>{`🎧 Kam Daam | ${title}`}</title>
+      <title>{`Kam Daam | ${title}`}</title>
     </Helmet>
   );
 };

@@ -11,17 +11,18 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const HomeScreen = ({ match }) => {
-  const keyword = match.params.keyword;
+  
+  const keyword = match.params.keyword? match.params.keyword: '';
+  const category = match.params.category? match.params.category: '';
   const pageNumber = match.params.pageNumber || 1;
 
   const dispatch = useDispatch();
-
   const productList = useSelector((state) => state.productList);
   const { loading, products, error, totalPages, selectedPage } = productList;
 
   useEffect(() => {
-    dispatch(listProducts(keyword, pageNumber));
-  }, [dispatch, keyword, pageNumber]);
+    dispatch(listProducts(keyword,category, pageNumber));
+  }, [dispatch, keyword,category, pageNumber]);
 
   if (keyword && !productList.products.length) {
     toast.error(`❕ No results for ${keyword}`, {
