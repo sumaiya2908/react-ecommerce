@@ -55,24 +55,26 @@ const Header = ({ history }) => {
     }
     setKeyword("");
   };
-  const categorySelect = (e,d) => {
-    let category = d.value;
-    if (category.trim()) {
-      history.push(`/searchCategory/${category}`);
-    } else {
+  
+  const categorySelect= (e,d) => {
+    console.log(d.value)
+    if((d.value)){
+      history.push(`/category/${d.value}`);
+    }
+    else{
       history.push("/");
     }
-    
-  }
+  };
   const categoryOptions = [
     { key: "ep", value: "earphone", text: "Earphones" },
     { key: "hp", value: "headphone", text: "Headphones" },
-    { key: "mp", value: "mobile spare part", text: "Mobile Spare Part" },
+    { key: "mp", value: "mobilesparepart", text: "Mobile Spare Part" },
     { key: "bt", value: "battery", text: "Battery" },
     { key: "ch", value: "charger", text: "Charger" },
-    { key: "mc", value: "memory card", text: "Memory Card" },
+    { key: "mc", value: "memorycard", text: "Memory Card" },
     { key: "pd", value: "pendrive", text: "Pendrive" },
     { key: "cm", value: "combo", text: "Combo" },
+    { key: "ga", value: "game", text: "game" },
   ];
 
   return (

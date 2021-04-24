@@ -7,6 +7,7 @@ import asyncHandler from 'express-async-handler';
 const getProducts = asyncHandler(async (req, res) => {
   const pageSize = 10;
   const selectedPage = Number(req.query.pageNumber) || 1;
+  const category = req.query.category ? { category: req.query.category } : {};
   const keyword = req.query.keyword
     ? {
         name: {
@@ -15,9 +16,8 @@ const getProducts = asyncHandler(async (req, res) => {
         },
       }
     : {};
-
-  const productCount = await Product.countDocuments({ ...keyword });
-  const products = await Product.find({ ...keyword })
+  const productCount = await Product.countDocuments({...category,...keyword });
+  const products = await Product.find({...category, ...keyword})
     .limit(pageSize)
     .skip(pageSize * (selectedPage - 1));
 
