@@ -15,20 +15,12 @@ const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword? match.params.keyword: '';
   // const category = match.params.category? match.params.category: '';
   const pageNumber = match.params.pageNumber || 1;
-  const category = match.params.id ? match.params.id : '';
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.productList);
   const { loading, products, error, totalPages, selectedPage } = productList;
   useEffect(() => {
-    dispatch(listProducts(category));
-
-    return () => {
-      //
-    };
-  }, [category]);
-  useEffect(() => {
-    dispatch(listProducts(category, keyword, pageNumber));
-  }, [dispatch,category, keyword, pageNumber]);
+    dispatch(listProducts( keyword, pageNumber));
+  }, [dispatch, keyword, pageNumber]);
 
   if (keyword && !productList.products.length) {
     toast.error(`❕ No results for ${keyword}`, {

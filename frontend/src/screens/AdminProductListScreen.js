@@ -35,7 +35,7 @@ const AdminProductListScreen = ({ history, match }) => {
       history.push(`/admin/product/${createdProduct._id}/edit`);
     } else {
       dispatch({ type: PRODUCT_LIST_RESET });
-      dispatch(listProducts('','', pageNumber));
+      dispatch(listProducts('', pageNumber));
     }
   }, [dispatch, history, userInfo, successDelete, successCreate, createdProduct]);
 
