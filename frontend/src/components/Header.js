@@ -56,6 +56,7 @@ const Header = ({ history }) => {
     setKeyword("");
   };
   
+<<<<<<< HEAD
   // const categorySelect= (e,d) => {
   //   console.log(d.value)
   //   if((d.value)){
@@ -76,6 +77,28 @@ const Header = ({ history }) => {
   //   { key: "cm", value: "combo", text: "Combo" },
   //   { key: "ga", value: "game", text: "game" },
   // ];
+=======
+//   const categorySelect= (e,d) => {
+//     console.log(d.value)
+//     if((d.value)){
+//       history.push(`/category/${d.value}`);
+//     }
+//     else{
+//       history.push("/");
+//     }
+//   };
+//   const categoryOptions = [
+//     { key: "ep", value: "earphone", text: "Earphones" },
+//     { key: "hp", value: "headphone", text: "Headphones" },
+//     { key: "mp", value: "mobilesparepart", text: "Mobile Spare Part" },
+//     { key: "bt", value: "battery", text: "Battery" },
+//     { key: "ch", value: "charger", text: "Charger" },
+//     { key: "mc", value: "memorycard", text: "Memory Card" },
+//     { key: "pd", value: "pendrive", text: "Pendrive" },
+//     { key: "cm", value: "combo", text: "Combo" },
+//     { key: "ga", value: "game", text: "game" },
+//   ];
+>>>>>>> 33ae568eab9bc2f8510a34925c288243a267e2d2
 
   return (
     <div className="nav-header">
@@ -121,6 +144,7 @@ const Header = ({ history }) => {
             />
           </Form.Field>
         </Form>
+<<<<<<< HEAD
         {/* <div>
           <Dropdown
             clearable
@@ -131,6 +155,8 @@ const Header = ({ history }) => {
             onChange={categorySelect}
           />
         </div> */}
+=======
+>>>>>>> 33ae568eab9bc2f8510a34925c288243a267e2d2
         
         <div className="nav__cart">
           <Menu compact>
