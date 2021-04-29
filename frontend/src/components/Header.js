@@ -56,26 +56,26 @@ const Header = ({ history }) => {
     setKeyword("");
   };
   
-  const categorySelect= (e,d) => {
-    console.log(d.value)
-    if((d.value)){
-      history.push(`/category/${d.value}`);
-    }
-    else{
-      history.push("/");
-    }
-  };
-  const categoryOptions = [
-    { key: "ep", value: "earphone", text: "Earphones" },
-    { key: "hp", value: "headphone", text: "Headphones" },
-    { key: "mp", value: "mobilesparepart", text: "Mobile Spare Part" },
-    { key: "bt", value: "battery", text: "Battery" },
-    { key: "ch", value: "charger", text: "Charger" },
-    { key: "mc", value: "memorycard", text: "Memory Card" },
-    { key: "pd", value: "pendrive", text: "Pendrive" },
-    { key: "cm", value: "combo", text: "Combo" },
-    { key: "ga", value: "game", text: "game" },
-  ];
+//   const categorySelect= (e,d) => {
+//     console.log(d.value)
+//     if((d.value)){
+//       history.push(`/category/${d.value}`);
+//     }
+//     else{
+//       history.push("/");
+//     }
+//   };
+//   const categoryOptions = [
+//     { key: "ep", value: "earphone", text: "Earphones" },
+//     { key: "hp", value: "headphone", text: "Headphones" },
+//     { key: "mp", value: "mobilesparepart", text: "Mobile Spare Part" },
+//     { key: "bt", value: "battery", text: "Battery" },
+//     { key: "ch", value: "charger", text: "Charger" },
+//     { key: "mc", value: "memorycard", text: "Memory Card" },
+//     { key: "pd", value: "pendrive", text: "Pendrive" },
+//     { key: "cm", value: "combo", text: "Combo" },
+//     { key: "ga", value: "game", text: "game" },
+//   ];
 
   return (
     <div className="nav-header">
@@ -121,16 +121,16 @@ const Header = ({ history }) => {
             />
           </Form.Field>
         </Form>
-        <div>
-          <Dropdown
-            clearable
-            placeholder="Select Category"
-            search
-            selection
-            options={categoryOptions}
-            onChange={categorySelect}
-          />
-        </div>
+//         <div>
+//           <Dropdown
+//             clearable
+//             placeholder="Select Category"
+//             search
+//             selection
+//             options={categoryOptions}
+//             onChange={categorySelect}
+//           />
+//         </div>
         
         <div className="nav__cart">
           <Menu compact>
