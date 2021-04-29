@@ -5,11 +5,7 @@ function Whatsapp() {
   return (
     <div className="whatsapp">
       <a
-<<<<<<< HEAD
-        href="https://api.whatsapp.com/send?phone=1234567809?text=I am contacting through the whatsapp"
-=======
-        href="https://api.whatsapp.com/send?phone=1234567890?text=I am contacting through the whatsapp"
->>>>>>> 33ae568eab9bc2f8510a34925c288243a267e2d2
+        href="https://api.whatsapp.com/send?phone=1234567889?text=I am contacting through the whatsapp"
         target="_blank"
       >
         <Button className="whatsappBtn">
