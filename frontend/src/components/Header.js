@@ -121,16 +121,6 @@ const Header = ({ history }) => {
             />
           </Form.Field>
         </Form>
-//         <div>
-//           <Dropdown
-//           clearable
-//           placeholder="Select Category"
-//           search
-//           selection
-//           options={categoryOptions}
-//           onChange={categorySelect}
-//           />
-//         </div>
         
         <div className="nav__cart">
           <Menu compact>
