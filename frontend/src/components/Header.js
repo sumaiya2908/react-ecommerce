@@ -123,12 +123,12 @@ const Header = ({ history }) => {
         </Form>
 //         <div>
 //           <Dropdown
-//             clearable
-//             placeholder="Select Category"
-//             search
-//             selection
-//             options={categoryOptions}
-//             onChange={categorySelect}
+//           clearable
+//           placeholder="Select Category"
+//           search
+//           selection
+//           options={categoryOptions}
+//           onChange={categorySelect}
 //           />
 //         </div>
         
